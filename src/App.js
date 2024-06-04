@@ -1,9 +1,9 @@
 import Form from "./Components/Form";
-
+import Navbar from "./Components/Navbar/NavBar";
 function App() {
   return (
     <div className="App">
-      <Form />
+      <Navbar/>
     </div>
   );
 }
