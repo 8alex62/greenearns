@@ -1,4 +1,5 @@
 import React from "react";
+import Mention from "./Mention";
 import styled from 'styled-components';
   
 const Footer = () => {
@@ -13,16 +14,51 @@ const Footer = () => {
         <Row>
           <Column>
             <Heading>A propos de nous</Heading>
-            <FooterLink href="#">Histoire</FooterLink>
-            <FooterLink href="#">Produits</FooterLink>
-            <FooterLink href="#">Technologies</FooterLink>
+            <FooterLink href="#">
+              <i className="fa-solid fa-book-open">
+                <span style={{ marginLeft: "10px" , fontFamily: "Roboto", fontSize: "18px"}}>
+                Histoire
+                </span>
+              </i>
+            </FooterLink>
+            <FooterLink href="#">
+              <i className="fa-solid fa-recycle">
+                <span style={{ marginLeft: "10px" , fontFamily: "Roboto", fontSize: "18px"}}>
+                Produits
+                </span>
+              </i>
+            </FooterLink>
+            <FooterLink href="#">
+              <i className="fa-solid fa-microchip">
+                <span style={{ marginLeft: "10px" , fontFamily: "Roboto", fontSize: "18px"}}>
+                Technologies
+                </span>
+              </i>
+            </FooterLink>
           </Column>
           <Column>
             <Heading>Services</Heading>
-            <FooterLink href="#">Writing</FooterLink>
-            <FooterLink href="#">Internships</FooterLink>
-            <FooterLink href="#">Coding</FooterLink>
-            <FooterLink href="#">Teaching</FooterLink>
+            <FooterLink href="#">
+              <i className="fa-solid fa-dumpster">
+                <span style={{ marginLeft: "10px" , fontFamily: "Roboto", fontSize: "18px"}}>
+                Nos Poubelles
+                </span>
+              </i>
+            </FooterLink>
+            <FooterLink href="#">
+              <i className="fa-solid fa-map-location-dot">
+                <span style={{ marginLeft: "10px" , fontFamily: "Roboto", fontSize: "18px"}}>
+                Carte
+                </span>
+              </i>
+            </FooterLink>
+            <FooterLink href="#">
+            <i className="fab fa-google-play">
+                <span style={{ marginLeft: "10px" , fontFamily: "Roboto", fontSize: "18px"}}>
+                 Notre Application
+                </span>
+              </i>
+              </FooterLink>
           </Column>
           <Column>
             <Heading>Contact</Heading>
@@ -31,11 +67,22 @@ const Footer = () => {
                 <span style={{ marginLeft: "10px" , fontFamily: "Roboto", fontSize: "18px"}}>
                   contact@greenearns.com
                 </span>
-              </i>
+            </i>
             </FooterLink>
-            <FooterLink href="#">Ahemdabad</FooterLink>
-            <FooterLink href="#">Indore</FooterLink>
-            <FooterLink href="#">Mumbai</FooterLink>
+            <FooterLink href="#">  <i className="fa-solid fa-phone">
+                <span style={{ marginLeft: "10px" , fontFamily: "Roboto", fontSize: "18px"}}>
+                04.28.29.25.75
+                </span>
+            </i></FooterLink>
+            <FooterLink href="#">
+              <div style={{ display: "flex", alignItems: "flex-start" }}>
+                <i className="fa-solid fa-house" style={{ marginRight: "10px" }}></i>
+                <span style={{ fontFamily: "Roboto", fontSize: "18px" }}>
+                  29 Avenue Leclerc, <br />
+                  69007 Lyon, France
+                </span>
+              </div>
+            </FooterLink>
           </Column>
           <Column>
             <Heading>Reseaux Sociaux</Heading>
@@ -60,7 +107,7 @@ const Footer = () => {
                 </span>
               </i>
             </FooterLink>
-            <FooterLink href="#">
+            <FooterLink href="https://youtu.be/MIbHGAFEWts?si=vg-Ni9R7NVlUp4yD">
               <i className="fab fa-youtube">
                 <span style={{ marginLeft: "10px" , fontFamily: "Roboto"}}>
                   Youtube
@@ -77,6 +124,7 @@ const Footer = () => {
           </Column>
         </Row>
       </Container>
+      <Mention/>
     </Box>
   );
 };
@@ -91,7 +139,7 @@ export default Footer;
  const Box = styled.div`
   padding: 80px 60px;
   background: black;
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   
