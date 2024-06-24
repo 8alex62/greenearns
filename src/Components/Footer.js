@@ -1,204 +1,169 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBookOpen, faRecycle, faMicrochip, faDumpster, faMapMarkerAlt, faEnvelope, faPhone, faHome } from "@fortawesome/free-solid-svg-icons";
+import { faFacebookF, faInstagram, faTwitter, faYoutube, faTiktok } from "@fortawesome/free-brands-svg-icons";
 import Mention from "./Mention";
-import styled from 'styled-components';
-  
+
 const Footer = () => {
   return (
     <Box>
-      <h1 style={{ color: "green", 
-                   textAlign: "center", 
-                   marginTop: "-50px" }}>
+      <h1 style={{ color: "green", textAlign: "center", marginTop: "-50px" }}>
         GreenEarns : La méthode gagnante du recyclage
       </h1>
       <Container>
         <Row>
           <Column>
             <Heading>A propos de nous</Heading>
-            <FooterLink href="#">
-              <i className="fa-solid fa-book-open">
-                <span style={{ marginLeft: "10px" , fontFamily: "Roboto", fontSize: "18px"}}>
-                Histoire
-                </span>
-              </i>
+            <FooterLink to="/history">
+              <FontAwesomeIcon icon={faBookOpen} />
+              Histoire
             </FooterLink>
-            <FooterLink href="#">
-              <i className="fa-solid fa-recycle">
-                <span style={{ marginLeft: "10px" , fontFamily: "Roboto", fontSize: "18px"}}>
-                Produits
-                </span>
-              </i>
+            <FooterLink to="/products">
+              <FontAwesomeIcon icon={faRecycle} />
+              Produits
             </FooterLink>
-            <FooterLink href="#">
-              <i className="fa-solid fa-microchip">
-                <span style={{ marginLeft: "10px" , fontFamily: "Roboto", fontSize: "18px"}}>
-                Technologies
-                </span>
-              </i>
+            <FooterLink to="/technologies">
+              <FontAwesomeIcon icon={faMicrochip} />
+              Technologies
             </FooterLink>
           </Column>
           <Column>
             <Heading>Services</Heading>
-            <FooterLink href="#">
-              <i className="fa-solid fa-dumpster">
-                <span style={{ marginLeft: "10px" , fontFamily: "Roboto", fontSize: "18px"}}>
-                Nos Poubelles
-                </span>
-              </i>
+            <FooterLink to="/bins">
+              <FontAwesomeIcon icon={faDumpster} />
+              Nos Poubelles
             </FooterLink>
-            <FooterLink href="#">
-              <i className="fa-solid fa-map-location-dot">
-                <span style={{ marginLeft: "10px" , fontFamily: "Roboto", fontSize: "18px"}}>
-                Carte
-                </span>
-              </i>
+            <FooterLink to="/map">
+              <FontAwesomeIcon icon={faMapMarkerAlt} />
+              Carte
             </FooterLink>
-            <FooterLink href="#">
-            <i className="fab fa-google-play">
-                <span style={{ marginLeft: "10px" , fontFamily: "Roboto", fontSize: "18px"}}>
-                 Notre Application
-                </span>
-              </i>
-              </FooterLink>
+            <FooterLink to="/app">
+              <FontAwesomeIcon icon={faHome} />
+              Notre Application
+            </FooterLink>
           </Column>
           <Column>
             <Heading>Contact</Heading>
-            <FooterLink href="#">
-            <i className="fa-solid fa-envelope">
-                <span style={{ marginLeft: "10px" , fontFamily: "Roboto", fontSize: "18px"}}>
-                  contact@greenearns.com
-                </span>
-            </i>
+            <FooterLink href="mailto:contact@greenearns.com">
+              <FontAwesomeIcon icon={faEnvelope} />
+              contact@greenearns.com
             </FooterLink>
-            <FooterLink href="#">  <i className="fa-solid fa-phone">
-                <span style={{ marginLeft: "10px" , fontFamily: "Roboto", fontSize: "18px"}}>
-                04.28.29.25.75
-                </span>
-            </i></FooterLink>
-            <FooterLink href="#">
+            <FooterLink href="tel:0428292575">
+              <FontAwesomeIcon icon={faPhone} />
+              04.28.29.25.75
+            </FooterLink>
+            <FooterLink>
               <div style={{ display: "flex", alignItems: "flex-start" }}>
-                <i className="fa-solid fa-house" style={{ marginRight: "10px" }}></i>
-                <span style={{ fontFamily: "Roboto", fontSize: "18px" }}>
+                <FontAwesomeIcon icon={faHome} style={{ marginRight: "10px" }} />
+               
                   29 Avenue Leclerc, <br />
                   69007 Lyon, France
-                </span>
+
               </div>
             </FooterLink>
           </Column>
           <Column>
-            <Heading>Reseaux Sociaux</Heading>
-            <FooterLink href="#">
-              <i className="fab fa-facebook-f">
-                <span style={{ marginLeft: "10px" , fontFamily: "Roboto"}}>
-                  Facebook
-                </span>
-              </i>
+            <Heading>Réseaux Sociaux</Heading>
+            <FooterLink href="https://www.facebook.com">
+              <FontAwesomeIcon icon={faFacebookF} />
+              Facebook
             </FooterLink>
-            <FooterLink href="#">
-              <i className="fab fa-instagram">
-                <span style={{ marginLeft: "10px" , fontFamily: "Roboto"}}>
-                  Instagram
-                </span>
-              </i>
+            <FooterLink href="https://www.instagram.com">
+              <FontAwesomeIcon icon={faInstagram} />
+              Instagram
             </FooterLink>
-            <FooterLink href="#">
-              <i className="fab fa-x-twitter">
-                <span style={{ marginLeft: "10px" , fontFamily: "Roboto"}}>
-                Twitter
-                </span>
-              </i>
+            <FooterLink href="https://www.twitter.com">
+              <FontAwesomeIcon icon={faTwitter} />
+              Twitter
             </FooterLink>
-            <FooterLink href="https://youtu.be/MIbHGAFEWts?si=vg-Ni9R7NVlUp4yD">
-              <i className="fab fa-youtube">
-                <span style={{ marginLeft: "10px" , fontFamily: "Roboto"}}>
-                  Youtube
-                </span>
-              </i>
+            <FooterLink href="https://www.youtube.com">
+              <FontAwesomeIcon icon={faYoutube} />
+              Youtube
             </FooterLink>
-            <FooterLink href="#">
-              <i className="fab fa-tiktok">
-                <span style={{ marginLeft: "10px" , fontFamily: "Roboto"}}>
-                  TikTok
-                </span>
-              </i>
+            <FooterLink href="https://www.tiktok.com">
+              <FontAwesomeIcon icon={faTiktok} />
+              TikTok
             </FooterLink>
           </Column>
         </Row>
       </Container>
-      <Mention/>
+      <Mention />
     </Box>
   );
 };
 
 export default Footer;
 
-
-
-
-//CSS
-
- const Box = styled.div`
+const Box = styled.div`
   padding: 80px 60px;
   background: black;
   position: relative;
   bottom: 0;
   width: 100%;
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   @media (max-width: 1000px) {
     padding: 70px 30px;
   }
 `;
 
- const Container = styled.div`
+const Container = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+`;
+
+const Row = styled.div`
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  max-width: 80%;
+  width: 100%;
   margin: 0 auto;
 `;
 
- const Column = styled.div`
+const Column = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: left;
-  margin-left: 20px;
+  margin: 20px;
   max-width: 220px;
-  
+
   @media (max-width: 1000px) {
-    margin-left: 0;
-    align-items: center;
     text-align: center;
-    margin-bottom: 20px;
   }
 `;
 
- const Row = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
-  grid-gap:20%; 
-  
-  @media (max-width: 1000px) {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  }
-`;
-
- const FooterLink = styled.a`
+const FooterLink = styled.a`
   color: #fff;
   margin-bottom: 20px;
   font-size: 18px;
   text-decoration: none;
-  
+  display: flex;
+  align-items: center;
+
   &:hover {
     color: green;
     transition: 200ms ease-in;
   }
+
+  svg {
+    margin-right: 10px;
+  }
 `;
 
- const Heading = styled.p`
+const Heading = styled.p`
   font-size: 24px;
   color: #fff;
   margin-bottom: 40px;
   font-weight: bold;
   white-space: nowrap;
+  text-align: center;
 `;
-
 
