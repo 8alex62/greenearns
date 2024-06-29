@@ -46,46 +46,42 @@ const Footer = () => {
           </Column>
           <Column>
             <Heading>Contact</Heading>
-            <FooterLink href="mailto:contact@greenearns.com">
+            <FooterAnchor href="mailto:contact@greenearns.com">
               <FontAwesomeIcon icon={faEnvelope} />
               contact@greenearns.com
-            </FooterLink>
-            <FooterLink href="tel:0428292575">
+            </FooterAnchor>
+            <FooterAnchor href="tel:0428292575">
               <FontAwesomeIcon icon={faPhone} />
               04.28.29.25.75
-            </FooterLink>
-            <FooterLink>
-              <div style={{ display: "flex", alignItems: "flex-start" }}>
-                <FontAwesomeIcon icon={faHome} style={{ marginRight: "10px" }} />
-               
-                  29 Avenue Leclerc, <br />
-                  69007 Lyon, France
-
-              </div>
-            </FooterLink>
+            </FooterAnchor>
+            <FooterAddress>
+              <FontAwesomeIcon icon={faHome} style={{ marginRight: "10px" }} />
+              29 Avenue Leclerc, <br />
+              69007 Lyon, France
+            </FooterAddress>
           </Column>
           <Column>
             <Heading>Réseaux Sociaux</Heading>
-            <FooterLink href="https://www.facebook.com">
+            <FooterAnchor href="https://www.facebook.com">
               <FontAwesomeIcon icon={faFacebookF} />
               Facebook
-            </FooterLink>
-            <FooterLink href="https://www.instagram.com">
+            </FooterAnchor>
+            <FooterAnchor href="https://www.instagram.com">
               <FontAwesomeIcon icon={faInstagram} />
               Instagram
-            </FooterLink>
-            <FooterLink href="https://www.twitter.com">
+            </FooterAnchor>
+            <FooterAnchor href="https://www.twitter.com">
               <FontAwesomeIcon icon={faTwitter} />
               Twitter
-            </FooterLink>
-            <FooterLink href="https://www.youtube.com">
+            </FooterAnchor>
+            <FooterAnchor href="https://www.youtube.com">
               <FontAwesomeIcon icon={faYoutube} />
               Youtube
-            </FooterLink>
-            <FooterLink href="https://www.tiktok.com">
+            </FooterAnchor>
+            <FooterAnchor href="https://www.tiktok.com">
               <FontAwesomeIcon icon={faTiktok} />
               TikTok
-            </FooterLink>
+            </FooterAnchor>
           </Column>
         </Row>
       </Container>
@@ -99,9 +95,6 @@ export default Footer;
 const Box = styled.div`
   padding: 80px 60px;
   background: black;
-  position: relative;
-  bottom: 0;
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -116,13 +109,13 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1800px;
 `;
 
 const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   width: 100%;
   margin: 0 auto;
 `;
@@ -131,16 +124,17 @@ const Column = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: left;
+  text-align: center;
   margin: 20px;
   max-width: 220px;
+  flex: 1;
 
   @media (max-width: 1000px) {
-    text-align: center;
+    max-width: 100%;
   }
 `;
 
-const FooterLink = styled.a`
+const FooterLink = styled(Link)`
   color: #fff;
   margin-bottom: 20px;
   font-size: 18px;
@@ -158,6 +152,36 @@ const FooterLink = styled.a`
   }
 `;
 
+const FooterAnchor = styled.a`
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 18px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    color: green;
+    transition: 200ms ease-in;
+  }
+
+  svg {
+    margin-right: 10px;
+  }
+`;
+
+const FooterAddress = styled.div`
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+
+  svg {
+    margin-right: 10px;
+  }
+`;
+
 const Heading = styled.p`
   font-size: 24px;
   color: #fff;
@@ -166,4 +190,3 @@ const Heading = styled.p`
   white-space: nowrap;
   text-align: center;
 `;
-
