@@ -136,7 +136,7 @@ const StyledLink = styled(Link)`
 const CompteButton = styled(Link)`
     display: flex;
     align-items: center;
-    background: linear-gradient(45deg, #6abf4b, #90c138);
+    background: linear-gradient(45deg, #5e9945, #729d2d);
     color: white;
     text-decoration: none;
     font-size: 16px;
@@ -149,7 +149,7 @@ const CompteButton = styled(Link)`
     }
 
     &:hover {
-        background: linear-gradient(45deg, #90c138, #6abf4b);
+        background: linear-gradient(45deg, #729d2d, #5e9945);
         color: white;
     }
 `;
@@ -157,7 +157,7 @@ const CompteButton = styled(Link)`
 const LoginButton = styled(Link)`
     display: flex;
     align-items: center;
-    background: linear-gradient(45deg, #90c138, #6abf4b);
+    background: linear-gradient(45deg, #729d2d, #5e9945);
     color: white;
     text-decoration: none;
     font-size: 16px;
@@ -170,7 +170,7 @@ const LoginButton = styled(Link)`
     }
 
     &:hover {
-        background: linear-gradient(45deg, #6abf4b, #90c138);
+        background: linear-gradient(45deg, #5e9945, #729d2d);
         color: white;
     }
 `;
