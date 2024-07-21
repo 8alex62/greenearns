@@ -5,7 +5,7 @@ Pour ce faire Nous utiliserons l'IA (Intelligence Artifiecielle) qui permettra l
 Vous trouverez dans ce répertoir github une application web présentant le projet ainsi que les fonctionnalitées / technologies utilisées lors de la realisation de ce projet.
 
 
-##`Les étapes permettant d'installer une telle application sont les suivantes :`
+###`Les étapes permettant d'installer une telle application sont les suivantes :`
 
 ###`Etape 1 :`
 Ouvrir un terminal (ex : Powershell) -> se rendre dans le dossier ou vous souhaiter sauvegarder l'app
